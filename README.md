@@ -46,13 +46,13 @@ inclusive of both). If a customer does not match any defined strategy then they 
 The process follows the following steps:
 
 - Consumes customers
-- Consumes strategies
-- For each customer, find which strategy applies to them using their risk level and years until retirement
-- Retrieves the customer portfolios from the Financial Portfolio Service
-- Use a customer's selected strategy asset percentages, calculate the trades that must be made to rebalance their portfolio
-- Batch customer trades and send them to the Financial Portfolio Service - the max amount of trades per batch should be configurable
+- Consumes strategies.
+- For each customer, find which strategy applies to them using their risk level and years until retirement.
+- Retrieves the customer portfolios from the Financial Portfolio Service.
+- Use a customer's selected strategy asset percentages, calculate the trades that must be made to rebalance their portfolio.
+- Batch customer trades and send them to the Financial Portfolio Service - the max amount of trades per batch is configurable.
 
-Strategies whose percentages don't sum up to 100 are discarded and ignored
+Strategies whose percentages don't sum up to 100 are discarded and ignored.
 
 ## Financial Portfolio Service (FPS)
 
