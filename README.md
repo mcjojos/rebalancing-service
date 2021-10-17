@@ -1,5 +1,3 @@
-# README
-
 ## Re-balancing service
 
 A service to automate the daily re-balancing process of a customer's portfolio
