@@ -1,0 +1,37 @@
+{
+  "mappings": [
+    {
+      "priority": 1,
+      "request": {
+        "method": "GET",
+        "urlPathPattern": "/customer/([1-4])*"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "customers/customer{{request.pathSegments.[1]}}.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPathPattern": "/customer/.*"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "jsonBody":
+        {
+          "customerId": "{{request.pathSegments.[1]}}",
+          "stocks": "{{math 10 '*' request.pathSegments.[1]}}",
+          "bonds": "{{math 20 '*' request.pathSegments.[1]}}",
+          "cash": "{{math 40 '*' request.pathSegments.[1]}}"
+        }
+      }
+    }
+  ]
+}
