@@ -8,7 +8,7 @@ A service to automate the daily re-balancing process of a customer's portfolio
 
 The rebalancing service is built with maven and kotlin.
 
-There is the possibility to start a wiremock container in order to emulate the **FPS service locally**. The way to do that is first make sure you are in the
+There is the possibility to start a [wiremock](./wiremock) container in order to emulate the **FPS service locally**. The way to do that is first make sure you are in the
 root folder of the project and then
 
 ```shell
