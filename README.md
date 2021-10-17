@@ -8,14 +8,14 @@ A service to automate the daily re-balancing process of a customer's portfolio
 
 The rebalancing service is built with maven and kotlin.
 
-There is the possibility to start a [wiremock](./wiremock) container in order to emulate the **FPS service locally**. The way to do that is first make sure you are in the
+There is the possibility to start a [wiremock](./wiremock) container in order to emulate the **FPS service locally**.
+The way to do that is first make sure you are in the
 root folder of the project and then
-
 ```shell
 docker-compose up
 ```
 
-You wiremock will start to accept connections based on the [mappings](./wiremock/mappings)
+Your wiremock will start to accept connections based on the [mappings](./wiremock/mappings)
 
 You have two options to run the rebalancing application
 
@@ -49,7 +49,7 @@ The process follows the following steps:
 - Consumes strategies
 - For each customer, find which strategy applies to them using their risk level and years until retirement
 - Retrieves the customer portfolios from the Financial Portfolio Service
-- Use a customer's selected strategy's asset percentages, calculate the trades that must be made to rebalance their portfolio
+- Use a customer's selected strategy asset percentages, calculate the trades that must be made to rebalance their portfolio
 - Batch customer trades and send them to the Financial Portfolio Service - the max amount of trades per batch should be configurable
 
 Strategies whose percentages don't sum up to 100 are discarded and ignored
