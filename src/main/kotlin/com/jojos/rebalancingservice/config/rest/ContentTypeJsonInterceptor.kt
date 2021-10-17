@@ -5,10 +5,8 @@ import org.springframework.http.MediaType
 import org.springframework.http.client.ClientHttpRequestExecution
 import org.springframework.http.client.ClientHttpRequestInterceptor
 import org.springframework.http.client.ClientHttpResponse
-import java.io.IOException
 
 class ContentTypeJsonInterceptor : ClientHttpRequestInterceptor {
-    @Throws(IOException::class)
     override fun intercept(
         request: HttpRequest,
         body: ByteArray,

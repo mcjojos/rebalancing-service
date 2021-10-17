@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConstructorBinding
 
 @ConstructorBinding
 @ConfigurationProperties("fps")
-class FpsApiClientProperties(
+data class FpsApiClientProperties(
     val url: String,
     val batchSize: Int = 1,
     val connectionTimeout: Long = 500,
