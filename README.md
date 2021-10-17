@@ -1,6 +1,6 @@
 ## Re-balancing service
 
-A service to automate the daily re-balancing process of a customer's portfolio
+A service to automate the daily re-balancing process of a customer's portfolio.
 
 ## How do I run it?
 
@@ -8,18 +8,18 @@ The rebalancing service is built with maven and kotlin.
 
 There is the possibility to start a [wiremock](./wiremock) container in order to emulate the **FPS service locally**.
 The way to do that is first make sure you are in the
-root folder of the project and then
+root folder of the project and then:
 ```shell
 docker-compose up
 ```
 
 Your wiremock will start to accept connections based on the [mappings](./wiremock/mappings)
 
-You have two options to run the rebalancing application
+You have two options to run the rebalancing application:
 
 #### Run Option 1 - maven
 
-From the command line go to the root of the project and run the following command in a terminal window
+From the command line go to the root of the project and run the following command in a terminal window:
 
 ```shell
 ./mvnw spring-boot:run
@@ -30,7 +30,7 @@ From the command line go to the root of the project and run the following comman
 Configure a spring-boot application to run in Intellij.
 
 - From the main menu, select Run | Edit Configurations.
-- Add a new Spring Boot configuration. The main class should be `com.jojos.rebalancingservice.RebalancingServiceApplication`
+- Add a new Spring Boot configuration. The main class should be `com.jojos.rebalancingservice.RebalancingServiceApplication`.
 - From the main menu, select Run | Run `'RebalancingServiceApplication'`
 
 ### What does it do
