@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+scheduler:
+  rate: "PT24H"
+
+csv:
+  customersFile: "data/customers.csv"
+  strategiesFile: "data/strategy.csv"
+
+fps:
+  url: http://localhost:9990
+  batchSize: 2
