@@ -1,0 +1,11 @@
+version: '3'
+services:
+  fps-api-wiremock:
+    container_name: fps-api-wiremock
+    image: wiremock/wiremock
+    ports:
+      - "9990:8080"
+    volumes:
+      - ./wiremock:/wiremock-root
+    hostname: fps-api-wiremock
+    command: ["--root-dir=/wiremock-root", "--print-all-network-traffic", "--disable-gzip", "--global-response-templating"]
