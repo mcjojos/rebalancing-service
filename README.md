@@ -35,7 +35,7 @@ Configure a spring-boot application to run in Intellij.
 - Add a new Spring Boot configuration. The main class should be `com.jojos.rebalancingservice.RebalancingServiceApplication`
 - From the main menu, select Run | Run `'RebalancingServiceApplication'`
 
-### What does is do
+### What does it do
 
 The service is provided 2 CSV files every day to process customers.csv and strategy.csv (configurable properties)
 The [customers](./data/customers.csv) file contains customer data while the [strategy](./data/strategy.csv) file contains a list of investment strategies , each
@@ -46,7 +46,7 @@ inclusive of both). If a customer does not match any defined strategy then they 
 The process follows the following steps:
 
 - Consumes customers
-- Consume strategies
+- Consumes strategies
 - For each customer, find which strategy applies to them using their risk level and years until retirement
 - Retrieves the customer portfolios from the Financial Portfolio Service
 - Use a customer's selected strategy's asset percentages, calculate the trades that must be made to rebalance their portfolio
